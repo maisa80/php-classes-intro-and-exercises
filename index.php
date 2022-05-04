@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Classes and objects</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="wrapper">
     <h1>Classes and objects</h1>
 
     <?php
@@ -45,16 +47,16 @@
 		}
 
 		$louise = new Person;
-		echo $louise->getName();
+		echo "<p>{$louise->getName()}</p>";
 
-		echo "<br>";
+		
 		
 		$mattias = new Person;
 		$mattias->setName('mattias');
 		$mattias->setAge(23);
-		echo $mattias->getName();
-		echo "<br>";
-		echo $mattias->getGreeting();
+		echo "<p>{$mattias->getName()}</p>";
+	
+		echo "<p>{$mattias->getGreeting()}</p>";
 
 
 		// Class decalartion with __construct and typehinting
@@ -77,12 +79,12 @@
 
 		$cat = new Animal('Tiberius', 'Mjauuuu', 'Popcorn');
 		echo "<br>";
-		echo "<br>";
-		echo $cat->getFrase();
+	
+		echo "<p>{$cat->getFrase()}</p>";
 
 		$lion = new Animal('Simba', 'AAAARRRH', 'YOU');
 		echo "<br>";
-		echo "<br>";
+	
 		echo $lion->getFrase();
 		
 
@@ -183,7 +185,7 @@
 		echo "<br>";
 		echo $mercedes->getSlogan();
     ?>
-	
+	</div>
     <hr>
     <a href="https://www.php.net/manual/en/language.types.object.php">Objects</a>
 </body>
